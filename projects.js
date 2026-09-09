@@ -1,6 +1,7 @@
 const projects = [
   {
     id: "hyperliquid",
+    files: [{"label": "Strategy report", "type": "pdf", "path": "assets/pdfs/hyperliquid_strategy_report.pdf"}],
     year: "2026",
     title: "Hyperliquid ML Trading Strategy",
     category: "Quant",
@@ -21,6 +22,7 @@ const projects = [
 
   {
     id: "black-scholes",
+    files: [{"label": "Black-Scholes derivation", "type": "pdf", "path": "assets/pdfs/Black_Scholes.pdf"}],
     year: "2026",
     title: "Black-Scholes Equation",
     category: "Quant",
@@ -41,6 +43,7 @@ const projects = [
 
   {
     id: "calcofi",
+    files: [{"label": "CalCOFI notebook", "type": "notebook", "path": "assets/notebooks/CalCOFI.ipynb", "preview": "assets/previews/CalCOFI.html"}],
     year: "2026",
     title: "CalCOFI Oceanographic Machine Learning",
     category: "ML",
@@ -61,6 +64,7 @@ const projects = [
 
   {
     id: "chaotic-systems",
+    files: [{"label": "Chaotic systems report", "type": "pdf", "path": "assets/pdfs/Chaotic System.pdf"}],
     year: "2026",
     title: "Chaotic Systems & Causal Inference",
     category: "Physics",
@@ -81,6 +85,7 @@ const projects = [
 
   {
     id: "denmark-income",
+    files: [{"label": "Denmark income notebook", "type": "notebook", "path": "assets/notebooks/denmark_income.ipynb", "preview": "assets/previews/denmark_income.html"}],
     year: "2026",
     title: "Denmark Income Analysis",
     category: "Data",
@@ -101,6 +106,7 @@ const projects = [
 
   {
     id: "kaya",
+    files: [],
     year: "2026",
     title: "Kaya Equation & Global Emissions",
     category: "Data",
@@ -121,6 +127,7 @@ const projects = [
 
   {
     id: "astar",
+    files: [{"label": "A* notebook", "type": "notebook", "path": "assets/notebooks/A_star.ipynb", "preview": "assets/previews/A_star.html"}],
     year: "2026",
     title: "A* Pathfinding Algorithm",
     category: "Algorithms",

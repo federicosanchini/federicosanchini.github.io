@@ -1,0 +1,27 @@
+Upload these files to federicosanchini.github.io
+
+1. Unzip portfolio-update.zip on your computer.
+2. Open the repository on GitHub, then Add file > Upload files.
+3. Drag the CONTENTS of the extracted folder into the upload area:
+   index.html, app.js, projects.js, styles.css, assets/, scripts/.
+   Keep the assets/previews/ folder structure intact.
+4. Commit the changes to main and wait for the GitHub Pages deployment.
+5. Reload your site. The updated index uses new CSS/JS version tags.
+
+Your existing assets/pdfs, assets/notebooks and cv.pdf remain in place.
+This archive includes only replacements and new preview files.
+
+View PDF opens the PDF directly on your site. Download PDF saves it.
+View notebook opens a readable HTML preview on your site, including code
+and saved outputs. Download notebook saves the original .ipynb.
+Previews do not execute Python or interactive notebook widgets.
+Kaya has no PDF/notebook in the repository, so only its existing project
+information and source-code link are shown.
+
+When you update a notebook, regenerate and upload its preview:
+  python -m pip install nbconvert
+  python scripts/build_notebook_previews.py
+
+To add a new document, add its path to the matching project's files array
+in projects.js. For a notebook, include its generated HTML preview path.
+Use the exact filename, including capitalization and spaces.

@@ -5,6 +5,7 @@ const modalContent = document.querySelector("#modal-content");
 
 const categories = ["All", ...new Set(projects.map((project) => project.category))];
 let activeCategory = "All";
+let previousFocus = null;
 
 function renderFilters() {
   filterRoot.innerHTML = "";
@@ -13,6 +14,7 @@ function renderFilters() {
     const button = document.createElement("button");
     button.className = `filter-button ${activeCategory === category ? "active" : ""}`;
     button.textContent = category;
+    button.setAttribute("aria-pressed", String(activeCategory === category));
 
     button.addEventListener("click", () => {
       activeCategory = category;
@@ -27,6 +29,20 @@ function renderFilters() {
 function externalLink(url, label) {
   if (!url) return "";
   return `<a href="${url}" target="_blank" rel="noreferrer">${label} ↗</a>`;
+}
+
+// Paths are relative to this site, including filenames containing spaces.
+function fileLinks(project, detailed = false) {
+  return (project.files || []).map((file) => {
+    const preview = encodeURI(file.preview || file.path);
+    const download = encodeURI(file.path);
+    const kind = file.type === "pdf" ? "PDF" : "notebook";
+    const links = `<a href="${preview}" target="_blank" rel="noopener noreferrer">View ${kind} ↗</a>
+      <a href="${download}" download>Download ${kind} ↓</a>`;
+    return detailed
+      ? `<div class="project-file"><h4>${file.label}</h4><div class="file-actions">${links}</div></div>`
+      : links;
+  }).join("");
 }
 
 function renderProjects() {
@@ -53,6 +69,7 @@ function renderProjects() {
 
         <div class="project-actions">
           <button type="button" data-project="${project.id}">Read project →</button>
+          ${fileLinks(project)}
           ${project.demo ? externalLink(project.demo, "Live demo") : ""}
         </div>
       </article>
@@ -69,6 +86,7 @@ function openProject(projectId) {
   const project = projects.find((item) => item.id === projectId);
   if (!project) return;
 
+  previousFocus = document.activeElement;
   modalContent.innerHTML = `
     <div class="modal-kicker">${project.category.toUpperCase()} · ${project.year}</div>
     <h3 id="modal-title">${project.title}</h3>
@@ -82,6 +100,10 @@ function openProject(projectId) {
       ${project.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
     </div>
 
+    <section class="project-files" aria-label="Project documents">
+      ${fileLinks(project, true)}
+    </section>
+
     <div class="modal-links">
       ${externalLink(project.github, "Source code")}
       ${project.demo ? externalLink(project.demo, "Launch demo") : ""}
@@ -91,12 +113,16 @@ function openProject(projectId) {
   modal.classList.add("open");
   modal.setAttribute("aria-hidden", "false");
   document.body.classList.add("modal-open");
+  modal.querySelector(".modal-panel").scrollTop = 0;
+  modal.querySelector(".modal-close").focus();
 }
 
 function closeModal() {
+  if (!modal.classList.contains("open")) return;
   modal.classList.remove("open");
   modal.setAttribute("aria-hidden", "true");
   document.body.classList.remove("modal-open");
+  if (previousFocus?.isConnected) previousFocus.focus();
 }
 
 document.querySelectorAll("[data-close-modal]").forEach((element) => {
@@ -104,7 +130,17 @@ document.querySelectorAll("[data-close-modal]").forEach((element) => {
 });
 
 document.addEventListener("keydown", (event) => {
+  if (!modal.classList.contains("open")) return;
   if (event.key === "Escape") closeModal();
+  if (event.key === "Tab") {
+    const items = [...modal.querySelectorAll('a[href], button:not([disabled])')];
+    const first = items[0], last = items[items.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault(); last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault(); first.focus();
+    }
+  }
 });
 
 document.querySelector("#year").textContent = new Date().getFullYear();

@@ -506,3 +506,19 @@ h2 {
   .footer { flex-direction: column; }
   .modal-panel { padding: 34px 24px 28px; }
 }
+
+/* Project document actions */
+.project-actions, .file-actions { flex-wrap: wrap; }
+.project-actions { row-gap: 14px; }
+.project-files { margin-top: 28px; }
+.project-file { border-top: 1px solid var(--line); padding-top: 20px; margin-top: 20px; }
+.project-file h4 { margin: 0 0 12px; font-size: 1rem; }
+.file-actions { display: flex; gap: 12px; }
+.file-actions a { border: 1px solid var(--line); border-radius: 999px; padding: 10px 14px; font-size: .9rem; }
+.file-actions a:hover { color: var(--accent); border-color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .ticker-track { animation: none; }
+  .project-card, .button { transition: none; }
+}
