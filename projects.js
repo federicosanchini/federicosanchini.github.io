@@ -106,7 +106,7 @@ const projects = [
 
   {
     id: "kaya",
-    files: [],
+    files: [{"label": "Kaya report", "type": "pdf", "path": "assets/pdfs/Kaya Report.pdf"}],
     year: "2026",
     title: "Kaya Equation & Global Emissions",
     category: "Data",
