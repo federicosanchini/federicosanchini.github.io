@@ -1,5 +1,29 @@
 const projects = [
   {
+    "id": "basket-lab",
+    "files": [],
+    "year": "2026",
+    "title": "Basket Lab — Interactive Option Pricing",
+    "category": "Quant",
+    "description": "Interactive Monte Carlo pricing of two-asset basket options, with Greeks, sensitivity charts and simulated price paths.",
+    "tags": [
+      "Monte Carlo",
+      "Option Pricing",
+      "Greeks",
+      "JavaScript"
+    ],
+    "details": "An interactive application developed from a Python pricing notebook. Explore European basket calls and puts by changing market parameters, and inspect prices, confidence intervals, Greeks and risk-neutral or real-world simulations.",
+    "highlights": [
+      "Configurable spots, strike, maturity, rates, volatilities and correlation.",
+      "Monte Carlo pricing with confidence intervals and convergence analysis.",
+      "Delta, gamma, vega, theta and rho using common random numbers.",
+      "Sensitivity curves, spot–volatility heatmap and real-world scenario paths."
+    ],
+    "github": "https://github.com/federicosanchini/federicosanchini.github.io/tree/main/basket-lab",
+    "demo": "/basket-lab/"
+  },
+
+  {
     id: "hyperliquid",
     files: [{"label": "Strategy report", "type": "pdf", "path": "assets/pdfs/hyperliquid_strategy_report.pdf"}],
     year: "2026",
