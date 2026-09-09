@@ -55,6 +55,13 @@ function renderProjects() {
     .map(
       (project) => `
       <article class="project-card">
+        <button
+          class="project-card-open"
+          type="button"
+          data-project="${project.id}"
+          aria-label="Open ${project.title} project details"
+        ></button>
+
         <div class="project-topline">
           <span>${project.category.toUpperCase()}</span>
           <span>${project.year}</span>
@@ -68,7 +75,6 @@ function renderProjects() {
         </div>
 
         <div class="project-actions">
-          <button type="button" data-project="${project.id}">Read project →</button>
           ${fileLinks(project)}
           ${project.demo ? externalLink(project.demo, "Live demo") : ""}
         </div>

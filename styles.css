@@ -259,6 +259,24 @@ h2 {
   border-color: rgba(140, 242, 198, .38);
 }
 
+.project-card-open {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  cursor: pointer;
+}
+
+.project-card-open:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -4px;
+}
+
 .project-card::before {
   content: "";
   position: absolute;
@@ -321,7 +339,7 @@ h2 {
   gap: 18px;
   padding-top: 22px;
   position: relative;
-  z-index: 1;
+  z-index: 3;
   font-size: .86rem;
   font-weight: 600;
 }
