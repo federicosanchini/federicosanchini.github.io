@@ -50,15 +50,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
   position: sticky;
   top: 0;
   z-index: 10;
-  width: min(calc(100% - 40px), var(--shell));
-  margin: 0 auto;
-  padding: 20px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
   background: rgba(11, 13, 16, .78);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255,255,255,.05);
+}
+
+.header-inner {
+  min-height: 69px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .brand {
@@ -413,7 +415,55 @@ h2 {
   max-width: 620px;
   color: var(--muted);
   font-size: 1.1rem;
-  margin-bottom: 30px;
+  margin-bottom: 36px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.contact-card {
+  min-height: 158px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 24px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.016));
+  transition: transform .22s ease, border-color .22s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(140, 242, 198, .38);
+}
+
+.contact-label {
+  color: var(--accent);
+  font: .76rem "DM Mono", monospace;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.contact-value {
+  max-width: calc(100% - 32px);
+  font-size: 1rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.contact-arrow {
+  position: absolute;
+  right: 24px;
+  bottom: 22px;
+  color: var(--muted);
+  font-size: 1.1rem;
 }
 
 .footer {
@@ -521,6 +571,7 @@ h2 {
   .filters { justify-content: flex-start; }
   .project-card { grid-column: span 12; min-height: 320px; }
   .about-grid { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
   .footer { flex-direction: column; }
   .modal-panel { padding: 34px 24px 28px; }
 }
@@ -538,5 +589,5 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .ticker-track { animation: none; }
-  .project-card, .button { transition: none; }
+  .project-card, .contact-card, .button { transition: none; }
 }
