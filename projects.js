@@ -9,8 +9,7 @@ const projects = [
     "tags": [
       "Monte Carlo",
       "Option Pricing",
-      "Greeks",
-      "JavaScript"
+      "Greeks"
     ],
     "details": "Interactive application for analyzing European basket options, featuring dynamic parameter adjustments, price and confidence interval inspections, Greeks calculation, and risk-neutral or real-world Monte Carlo simulations.",
     "highlights": [
@@ -47,7 +46,7 @@ const projects = [
   {
     id: "black-scholes",
     files: [{"label": "Black-Scholes derivation", "type": "pdf", "path": "assets/pdfs/Black_Scholes.pdf"}],
-    year: "2026",
+    year: "2025",
     title: "Black-Scholes Equation",
     category: "Quant",
     description:
@@ -68,7 +67,7 @@ const projects = [
   {
     id: "calcofi",
     files: [{"label": "CalCOFI notebook", "type": "notebook", "path": "assets/notebooks/CalCOFI.ipynb", "preview": "assets/previews/CalCOFI.html"}],
-    year: "2026",
+    year: "2025",
     title: "CalCOFI Oceanographic Machine Learning",
     category: "ML",
     description:
@@ -89,7 +88,7 @@ const projects = [
   {
     id: "chaotic-systems",
     files: [{"label": "Chaotic systems report", "type": "pdf", "path": "assets/pdfs/Chaotic System.pdf"}],
-    year: "2026",
+    year: "2024",
     title: "Chaotic Systems & Causal Inference",
     category: "Physics",
     description:
@@ -110,7 +109,7 @@ const projects = [
   {
     id: "denmark-income",
     files: [{"label": "Denmark income notebook", "type": "notebook", "path": "assets/notebooks/denmark_income.ipynb", "preview": "assets/previews/denmark_income.html"}],
-    year: "2026",
+    year: "2024",
     title: "Denmark Income Analysis",
     category: "Data",
     description:
@@ -131,7 +130,7 @@ const projects = [
   {
     id: "kaya",
     files: [{"label": "Kaya report", "type": "pdf", "path": "assets/pdfs/Kaya Report.pdf"}],
-    year: "2026",
+    year: "2024",
     title: "Kaya Equation & Global Emissions",
     category: "Data",
     description:
@@ -152,7 +151,7 @@ const projects = [
   {
     id: "astar",
     files: [{"label": "A* notebook", "type": "notebook", "path": "assets/notebooks/A_star.ipynb", "preview": "assets/previews/A_star.html"}],
-    year: "2026",
+    year: "2025",
     title: "A* Pathfinding Algorithm",
     category: "Algorithms",
     description:
