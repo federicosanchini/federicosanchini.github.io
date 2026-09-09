@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Federico — Physics, Machine Learning, Quantitative Finance and Neuromorphic Computing." />
+  <title>Federico | Physics · ML · Quant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="noise"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top">FS<span class="accent">.</span></a>
+    <nav class="nav">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero shell">
+      <div class="eyebrow">PHYSICS · MACHINE LEARNING · QUANTITATIVE FINANCE</div>
+      <h1>
+        I build models for
+        <span class="gradient-text">complex systems.</span>
+      </h1>
+      <p class="hero-copy">
+        MSc Physics student working across neuromorphic computing,
+        machine learning and quantitative finance.
+      </p>
+
+      <div class="hero-actions">
+        <a class="button primary" href="#projects">Explore projects</a>
+        <a class="button secondary" href="YOUR_CV_LINK.pdf" target="_blank" rel="noreferrer">View CV</a>
+      </div>
+
+      <div class="hero-links">
+        <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a href="mailto:YOUR_EMAIL">Email ↗</a>
+      </div>
+    </section>
+
+    <section class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>PYTHON</span><span>STOCHASTIC PROCESSES</span><span>MONTE CARLO</span>
+        <span>SNN</span><span>MACHINE LEARNING</span><span>NUMERAI</span>
+        <span>QUANTITATIVE FINANCE</span><span>NEUROMORPHIC COMPUTING</span>
+        <span>PYTHON</span><span>STOCHASTIC PROCESSES</span><span>MONTE CARLO</span>
+        <span>SNN</span><span>MACHINE LEARNING</span><span>NUMERAI</span>
+      </div>
+    </section>
+
+    <section id="projects" class="section shell">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">SELECTED WORK</div>
+          <h2>Projects</h2>
+        </div>
+
+        <div id="filters" class="filters" aria-label="Project filters"></div>
+      </div>
+
+      <div id="projects-grid" class="projects-grid"></div>
+    </section>
+
+    <section id="about" class="section shell">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">BACKGROUND</div>
+          <h2>About</h2>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <span class="card-number">01</span>
+          <h3>Physics</h3>
+          <p>
+            MSc track focused on data physics, stochastic processes,
+            scientific computing and machine learning.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <span class="card-number">02</span>
+          <h3>Research</h3>
+          <p>
+            Thesis work on stochastic dynamics in neuromorphic networks,
+            with spiking neurons, STDP, LIF dynamics and E/I populations.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <span class="card-number">03</span>
+          <h3>Quant</h3>
+          <p>
+            Personal work on Monte Carlo pricing, financial modelling,
+            machine-learning competitions and market prediction.
+          </p>
+        </div>
+      </div>
+
+      <div class="stack">
+        <span>Python</span>
+        <span>NumPy</span>
+        <span>Pandas</span>
+        <span>Matplotlib</span>
+        <span>PyTorch</span>
+        <span>LightGBM</span>
+        <span>Scikit-learn</span>
+        <span>Git</span>
+        <span>Linux / HPC</span>
+      </div>
+    </section>
+
+    <section id="contact" class="section shell contact">
+      <div class="eyebrow">LET'S CONNECT</div>
+      <h2>Have an interesting problem?</h2>
+      <p>
+        I’m interested in machine learning, quantitative research,
+        scientific computing and data-driven systems.
+      </p>
+      <a class="button primary" href="mailto:YOUR_EMAIL">Get in touch</a>
+    </section>
+  </main>
+
+  <footer class="footer shell">
+    <span>© <span id="year"></span> Federico</span>
+    <span>Built with HTML · CSS · JavaScript · GitHub Pages</span>
+  </footer>
+
+  <div id="project-modal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" aria-label="Close project" data-close-modal>×</button>
+      <div id="modal-content"></div>
+    </article>
+  </div>
+
+  <script src="projects.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
