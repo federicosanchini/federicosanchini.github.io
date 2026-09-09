@@ -3,7 +3,7 @@ const projects = [
     "id": "basket-lab",
     "files": [],
     "year": "2026",
-    "title": "Basket Lab — Interactive Option Pricing",
+    "title": "Interactive Options Pricing",
     "category": "Quant",
     "description": "Interactive Monte Carlo pricing of two-asset basket options, with Greeks, sensitivity charts and simulated price paths.",
     "tags": [
@@ -12,7 +12,7 @@ const projects = [
       "Greeks",
       "JavaScript"
     ],
-    "details": "An interactive application developed from a Python pricing notebook. Explore European basket calls and puts by changing market parameters, and inspect prices, confidence intervals, Greeks and risk-neutral or real-world simulations.",
+    "details": "Interactive application for analyzing European basket options, featuring dynamic parameter adjustments, price and confidence interval inspections, Greeks calculation, and risk-neutral or real-world Monte Carlo simulations.",
     "highlights": [
       "Configurable spots, strike, maturity, rates, volatilities and correlation.",
       "Monte Carlo pricing with confidence intervals and convergence analysis.",
