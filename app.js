@@ -67,6 +67,13 @@ function renderProjects() {
           <span>${project.year}</span>
         </div>
 
+        ${["hl-research-lab", "basket-lab"].includes(project.id) ? `
+          <span class="project-app-badge">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" focusable="false"><path d="M3 1.5 10 6 3 10.5Z" /></svg>
+            Interactive web app
+          </span>
+        ` : ""}
+
         <h3>${project.title}</h3>
         <p>${project.description}</p>
 

@@ -631,3 +631,35 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   .ticker-track { animation: none; }
   .project-card, .contact-card, .button { transition: none; }
 }
+
+
+/* Identify the two interactive applications above their card titles. */
+.project-app-badge {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 8px;
+  max-width: 100%;
+  margin-top: 22px;
+  padding: 7px 11px;
+  border: 1px solid rgba(140, 242, 198, .32);
+  border-radius: 999px;
+  background: rgba(140, 242, 198, .08);
+  color: var(--accent);
+  font-family: "Inter", sans-serif;
+  font-size: .8125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: .01em;
+  pointer-events: none;
+}
+
+.project-app-badge svg {
+  flex: 0 0 12px;
+}
+
+.project-card .project-app-badge + h3 {
+  margin-top: 18px;
+}
