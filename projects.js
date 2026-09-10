@@ -1,5 +1,30 @@
 const projects = [
   {
+    "id": "hl-research-lab",
+    "files": [],
+    "year": "2026",
+    "title": "HL Research Lab",
+    "category": "Quant",
+    "description": "Interactive backtesting of Hyperliquid perpetual futures with Numerai and CrowdCent signals, configurable margin and leverage, and portfolio risk analytics.",
+    "tags": [
+      "Backtesting",
+      "Perpetual Futures",
+      "Funding",
+      "Risk Analytics"
+    ],
+    "details": "An interactive research app for exploring historical long/short strategies on Hyperliquid perpetual futures, using Numerai and CrowdCent signals. Configure the strategy and inspect account performance, funding costs and risk.",
+    "highlights": [
+      "Choose Numerai or CrowdCent signals and separate daily long and short order counts.",
+      "Configure cross or isolated margin, leverage, notional, capital, holding period and trading fees.",
+      "Explore equity, price PnL, funding, fees, return distributions and drawdowns.",
+      "Analyze Sharpe, Sortino, CAGR, Calmar and volatility, and export results and trade records.",
+      "Historical data coverage and liquidation approximations are documented inside the app."
+    ],
+    "github": "https://github.com/federicosanchini/HL",
+    "demo": "/hl-lab/"
+  },
+
+  {
     "id": "basket-lab",
     "files": [],
     "year": "2026",
