@@ -3,7 +3,7 @@ const projects = [
     "id": "hl-research-lab",
     "files": [{"label": "Strategy report", "type": "pdf", "path": "assets/pdfs/hyperliquid_strategy_report.pdf"}],
     "year": "2026",
-    "title": "HL Research Lab",
+    "title": "Hyperliquid Trading Backtester",
     "category": "Quant",
     "description": "Interactive backtesting of Hyperliquid perpetual futures with Numerai and CrowdCent signals, configurable margin and leverage, and portfolio risk analytics.",
     "tags": [
@@ -12,7 +12,7 @@ const projects = [
       "Funding",
       "Risk Analytics"
     ],
-    "details": "An interactive research app for exploring historical long/short strategies on Hyperliquid perpetual futures, using Numerai and CrowdCent signals. Configure the strategy and inspect account performance, funding costs and risk.",
+    "details": "An interactive trading and backtesting platform for long/short strategies on Hyperliquid perpetual futures. Build strategies using Numerai and CrowdCent signals, configure portfolio and execution parameters, and analyze historical PnL, funding costs, drawdowns and risk metrics.",
     "highlights": [
       "Choose Numerai or CrowdCent signals and separate daily long and short order counts.",
       "Configure cross or isolated margin, leverage, notional, capital, holding period and trading fees.",
