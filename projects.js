@@ -1,7 +1,7 @@
 const projects = [
   {
     "id": "hl-research-lab",
-    "files": [],
+    "files": [{"label": "Strategy report", "type": "pdf", "path": "assets/pdfs/hyperliquid_strategy_report.pdf"}],
     "year": "2026",
     "title": "HL Research Lab",
     "category": "Quant",
@@ -45,27 +45,6 @@ const projects = [
     ],
     "github": "https://github.com/federicosanchini/federicosanchini.github.io/tree/main/basket-lab",
     "demo": "/basket-lab/"
-  },
-
-  {
-    id: "hyperliquid",
-    files: [{"label": "Strategy report", "type": "pdf", "path": "assets/pdfs/hyperliquid_strategy_report.pdf"}],
-    year: "2026",
-    title: "Hyperliquid ML Trading Strategy",
-    category: "Quant",
-    description:
-      "Market-neutral machine learning trading strategy on Hyperliquid perpetuals, with backtesting, PnL, drawdown and funding analysis.",
-    tags: ["Python", "Machine Learning", "Trading", "Crypto"],
-    details:
-      "A quantitative-finance project exploring a market-neutral machine-learning strategy on Hyperliquid perpetual futures.",
-    highlights: [
-      "Market-neutral long/short strategy.",
-      "Machine-learning trading signals.",
-      "Backtesting with PnL and drawdown analysis.",
-      "Funding-rate impact analysis."
-    ],
-    github: "https://github.com/federicosanchini/hyperliquid-ML-trading-strategy",
-    demo: ""
   },
 
   {
